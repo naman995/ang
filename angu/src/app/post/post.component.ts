@@ -1,4 +1,4 @@
-import { Component, OnInit ,Input} from '@angular/core';
+import { Component, OnInit  } from '@angular/core';
 
 @Component({
   selector: 'app-post',
@@ -6,11 +6,10 @@ import { Component, OnInit ,Input} from '@angular/core';
   styleUrls: ['./post.component.css'],
 })
 export class PostComponent implements OnInit {
-
-  @Input() fromParent!: string;;
-  postParent:string = "message from Postparent";
-
+  childMessage: string = 'Hello from child';
   constructor() {}
+
+ 
 
   ngOnInit(): void {}
 }

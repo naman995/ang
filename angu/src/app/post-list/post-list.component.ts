@@ -6,8 +6,8 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./post-list.component.css'],
 })
 export class PostListComponent implements OnInit {
-  
-  @Input() fromPost!: string;
+
+   
 
   constructor() {}
 
