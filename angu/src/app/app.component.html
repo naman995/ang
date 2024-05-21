@@ -1,4 +1,5 @@
 <!-- <app-navbar></app-navbar> -->
-<app-post></app-post>
-<p>{{message}}</p>
+<app-post (messageEvent)="reciveMessage($event)"></app-post>
+<p>{{fromChildOutput}}</p>
+
 <router-outlet></router-outlet>

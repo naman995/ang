@@ -1,9 +1,7 @@
-To share data from child to parent using @ViewChild() decorator, we need to follow the below steps.
+Step 1: create variable in child 
+component and import Output and 
+EventEmitter
 
-Step1: Create a child component and parent component.
-(In post component.ts we have created a variable name childMessage Variable) 
-
-Step2: Import ViewChild from @angular/core.
-(In parent component.ts (app) we have imported ViewChild from @angular/core. then import post component then afterViewInit)
-
- step 3: inside the html file print using string interpolation    
+Step 2: Go to the parent component
+create a variable and function to captre value 
+and using string interpolation pass the value to html 
