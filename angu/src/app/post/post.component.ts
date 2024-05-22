@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { NgModule } from '@angular/core';
 
 @Component({
   selector: 'app-post',
@@ -15,16 +16,10 @@ export class PostComponent implements OnInit {
   constructor() {}
   ngOnInit(): void {}
 
-  onClick() {
-    this.message = 'You are my hero!';
+
+  userName!: string;
+  onKeyup(){
+    console.log(this.userName);
   }
 
-  onKeyup(e: any) {
-    console.log(e.target.value);
-  }
-  onKeyup2(username: any) {
-    console.log(username);
-  }
-
-  // userName!: string;
 }

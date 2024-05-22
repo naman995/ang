@@ -1,20 +1,3 @@
-<p class="text-red">post works!</p>
-{{message}}
-<!-- Property Binding -->
-<img [src]="imgUrl" alt="">
-<!-- Class binding -->
-<h1 [class.text-red]="bool">Naman</h1>
-
-<!-- Style Binding  -->
-<h1 [style.color]="bool ? 'red':'black'">Style Binding</h1>
-
-<!-- Event binding -->
-<button (click)="onClick()">Click Me</button>
-
-<!-- Event Filtering  -->
-
-<input type="text" (keyup.enter)="onKeyup($event)">
-
-<!-- Template Variable -->
-<input type="text" (keyup.enter)="onKeyup2(username.value)" #username >
-
+<!-- Two way data Binding -->
+<input type="text" [(ngModel)]="userName" (keyup.enter)="onKeyup()">
+<p>{{userName}}</p>
