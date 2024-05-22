@@ -19,7 +19,12 @@ export class PostComponent implements OnInit {
     this.message = 'You are my hero!';
   }
 
-  onKeyup(e:any) {
+  onKeyup(e: any) {
     console.log(e.target.value);
   }
+  onKeyup2(username: any) {
+    console.log(username);
+  }
+
+  // userName!: string;
 }

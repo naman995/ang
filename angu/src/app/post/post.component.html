@@ -14,3 +14,7 @@
 <!-- Event Filtering  -->
 
 <input type="text" (keyup.enter)="onKeyup($event)">
+
+<!-- Template Variable -->
+<input type="text" (keyup.enter)="onKeyup2(username.value)" #username >
+
