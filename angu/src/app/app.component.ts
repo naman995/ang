@@ -6,9 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  fromChildOutput!: string;
   title = 'angu';
-  reciveMessage($event: any) {
-    this.fromChildOutput = $event;
-  }
+
 }

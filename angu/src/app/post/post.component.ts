@@ -6,13 +6,20 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./post.component.css'],
 })
 export class PostComponent implements OnInit {
-  outputChildMessage: string = 'Message from child compoent via Output';
-  @Output() messageEvent = new EventEmitter<string>();
+  message: string = 'Hello World!';
+  imgUrl: string =
+    'https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png';
+
+  bool: boolean = true;
 
   constructor() {}
   ngOnInit(): void {}
 
-  sendMessage() {
-    this.messageEvent.emit(this.outputChildMessage);
+  onClick() {
+    this.message = 'You are my hero!';
+  }
+
+  onKeyup(e:any) {
+    console.log(e.target.value);
   }
 }

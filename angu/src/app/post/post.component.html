@@ -1,2 +1,16 @@
-<p>post works!</p>
- <button (click) = "sendMessage()">Click Me</button>
+<p class="text-red">post works!</p>
+{{message}}
+<!-- Property Binding -->
+<img [src]="imgUrl" alt="">
+<!-- Class binding -->
+<h1 [class.text-red]="bool">Naman</h1>
+
+<!-- Style Binding  -->
+<h1 [style.color]="bool ? 'red':'black'">Style Binding</h1>
+
+<!-- Event binding -->
+<button (click)="onClick()">Click Me</button>
+
+<!-- Event Filtering  -->
+
+<input type="text" (keyup.enter)="onKeyup($event)">

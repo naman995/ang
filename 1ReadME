@@ -1,7 +1,12 @@
-Step 1: create variable in child 
-component and import Output and 
-EventEmitter
+1) String Interpolation in post 
+component.
 
-Step 2: Go to the parent component
-create a variable and function to captre value 
-and using string interpolation pass the value to html 
+2) Property Binding
+
+3) Class Binding
+
+4) Style Binding
+
+5) Event Binding
+
+6) Event Filtering
