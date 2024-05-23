@@ -1,5 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { NgModule } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-post',
@@ -7,19 +6,15 @@ import { NgModule } from '@angular/core';
   styleUrls: ['./post.component.css'],
 })
 export class PostComponent implements OnInit {
-  message: string = 'Hello World!';
-  imgUrl: string =
-    'https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png';
-
-  bool: boolean = true;
+  postArray: Array<string> = ['post1', 'post2', 'post3', 'post4', 'post5'];
+  objArray: Array<object> = [
+    { id: 1, postTitle: 'post1' },
+    { id: 2, postTitle: 'post2' },
+    { id: 3, postTitle: 'post3' },
+    { id: 4, postTitle: 'post4' },
+    { id: 5, postTitle: 'post5' },
+  ];
 
   constructor() {}
   ngOnInit(): void {}
-
-
-  userName!: string;
-  onKeyup(){
-    console.log(this.userName);
-  }
-
 }

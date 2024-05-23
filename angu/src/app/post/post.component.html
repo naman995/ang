@@ -1,3 +1,5 @@
-<!-- Two way data Binding -->
-<input type="text" [(ngModel)]="userName" (keyup.enter)="onKeyup()">
-<p>{{userName}}</p>
+<ul>
+  <li *ngFor="let post of postArray">{{post}}</li>
+</ul>
+
+<!-- Fetching Object Array -->
