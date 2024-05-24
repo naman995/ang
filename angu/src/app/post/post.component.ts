@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostComponent implements OnInit {
   postArray: Array<string> = ['post1', 'post2', 'post3', 'post4', 'post5'];
-  objArray: Array<object> = [
+  objArray: Array<any> = [
     { id: 1, postTitle: 'post1' },
     { id: 2, postTitle: 'post2' },
     { id: 3, postTitle: 'post3' },
