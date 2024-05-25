@@ -17,4 +17,14 @@ export class PostComponent implements OnInit {
 
   constructor() {}
   ngOnInit(): void {}
+
+  addNew() {
+    this.objArray.push({ id: 6, postTitle: 'post6' });
+  }
+  onDelete(post:any) {
+
+    let index = this.objArray.indexOf(post);
+    this.objArray.splice(index, 1);
+
+  }
 }
