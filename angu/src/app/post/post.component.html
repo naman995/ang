@@ -11,7 +11,7 @@
 <button (click)='addNew()'>Add New Data</button>
 
 
-<div *ngIf="objArray.length>0">
+<div *ngIf='objArray.length>0 ; else noData'>
 
   <ul>
     <li *ngFor="let post of objArray; let i = index"> {{ post.postTitle}} <button (click)="onDelete(i)">Delete</button>
@@ -19,6 +19,8 @@
   </ul>
 </div>
 
-<div *ngIf="objArray.length == 0">
+<ng-template  #noData>
   <p>There is no Data to Fetch</p>
-</div>
+</ng-template>
+
+<ng-template>this will not be displayed as it require structural directive</ng-template>
