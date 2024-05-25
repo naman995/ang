@@ -21,10 +21,7 @@ export class PostComponent implements OnInit {
   addNew() {
     this.objArray.push({ id: 6, postTitle: 'post6' });
   }
-  onDelete(post:any) {
-
-    let index = this.objArray.indexOf(post);
+  onDelete(index: any) {
     this.objArray.splice(index, 1);
-
   }
 }

@@ -7,7 +7,7 @@
   <li *ngFor="let post of objArray"> {{ post | json}}</li>
 </ul>
 <ul>
-  <li *ngFor="let post of objArray"> {{ post.postTitle}} <button (click)="onDelete(post)">Delete</button></li>
+  <li *ngFor="let post of objArray; let i = index"> {{ post.postTitle}} <button (click)="onDelete(i)">Delete</button></li>
 </ul>
 
 
