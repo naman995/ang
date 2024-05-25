@@ -6,9 +6,19 @@
 <ul>
   <li *ngFor="let post of objArray"> {{ post | json}}</li>
 </ul>
-<ul>
-  <li *ngFor="let post of objArray; let i = index"> {{ post.postTitle}} <button (click)="onDelete(i)">Delete</button></li>
-</ul>
 
 
-<button (click) = 'addNew()'>Add New Data</button>
+<button (click)='addNew()'>Add New Data</button>
+
+
+<div *ngIf="objArray.length>0">
+
+  <ul>
+    <li *ngFor="let post of objArray; let i = index"> {{ post.postTitle}} <button (click)="onDelete(i)">Delete</button>
+    </li>
+  </ul>
+</div>
+
+<div *ngIf="objArray.length == 0">
+  <p>There is no Data to Fetch</p>
+</div>
