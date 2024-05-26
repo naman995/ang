@@ -1,26 +1,16 @@
-<ul>
-  <li *ngFor="let post of postArray">{{post}}</li>
-</ul>
-
-<!-- Fetching Object Array -->
-<ul>
-  <li *ngFor="let post of objArray"> {{ post | json}}</li>
-</ul>
-
-
-<button (click)='addNew()'>Add New Data</button>
-
-
-<div *ngIf='objArray.length>0 ; else noData'>
-
-  <ul>
-    <li *ngFor="let post of objArray; let i = index"> {{ post.postTitle}} <button (click)="onDelete(i)">Delete</button>
-    </li>
-  </ul>
+<div>
+  <button (click)="onClick('step 1')">Step 1</button>
+  <button (click)="onClick('step 2')">Step 2</button>
+  <button (click)="onClick('step 3')">Step 3</button>
 </div>
 
-<ng-template  #noData>
-  <p>There is no Data to Fetch</p>
-</ng-template>
+<!-- <div *ngIf="stepForm == 'step 1'">Step 1 Form </div>
+<div *ngIf="stepForm == 'step 2'">Step 2 Form </div>
+<div *ngIf="stepForm == 'step 3'">Step 3 Form </div> -->
 
-<ng-template>this will not be displayed as it require structural directive</ng-template>
+<div [ngSwitch]="stepForm">
+  <div *ngSwitchCase="'step 1'">Step 1 Form </div>
+  <div *ngSwitchCase="'step 2'">Step 2 Form </div>
+  <div *ngSwitchCase="'step 3'">Step 3 Form </div>
+  <div *ngSwitchDefault>Default Text</div>
+</div>

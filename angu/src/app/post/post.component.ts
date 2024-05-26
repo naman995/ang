@@ -5,23 +5,9 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.css'],
 })
-export class PostComponent implements OnInit {
-  postArray: Array<string> = ['post1', 'post2', 'post3', 'post4', 'post5'];
-  objArray: Array<any> = [
-    { id: 1, postTitle: 'post1' },
-    { id: 2, postTitle: 'post2' },
-    { id: 3, postTitle: 'post3' },
-    { id: 4, postTitle: 'post4' },
-    { id: 5, postTitle: 'post5' },
-  ];
-
-  constructor() {}
-  ngOnInit(): void {}
-
-  addNew() {
-    this.objArray.push({ id: 6, postTitle: 'post6' });
-  }
-  onDelete(index: any) {
-    this.objArray.splice(index, 1);
+export class PostComponent {
+  stepForm!: string;
+  onClick(status: string) {
+    this.stepForm = status;
   }
 }
