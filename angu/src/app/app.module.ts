@@ -8,6 +8,7 @@ import { PostComponent } from './post/post.component';
 import { PostListComponent } from './post-list/post-list.component';
 import { AppendPipe } from './Pipes/append.pipe';
 import { AppendCLIPipe } from './Pipes/append-cli.pipe';
+import { SummaryPipe } from './Pipes/summary.pipe';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { AppendCLIPipe } from './Pipes/append-cli.pipe';
     PostListComponent,
     AppendPipe,
     AppendCLIPipe,
+    SummaryPipe,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
