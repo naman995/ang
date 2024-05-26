@@ -6,14 +6,5 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./post.component.css'],
 })
 export class PostComponent {
-  title: string = 'Post Title';
-  count: number = 10000000;
-  deval: number = 3.1245432;
-  curr: number = 123456;
-  date: Date = new Date();
-
-  postObj:object = {
-    id: 1,
-    title: 'Post Title',
-  };
+  per:number = 0.567;
 }
