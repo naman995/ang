@@ -6,5 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./post.component.css'],
 })
 export class PostComponent {
-  per:number = 0.567;
+    postArray:Array<string>=[
+    'Post 1',
+    'Post 2',
+    'Post 3',
+    'Post 4',
+    'Post 5',
+    'Post 6'
+    ]
 }
