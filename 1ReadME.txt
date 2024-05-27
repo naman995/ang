@@ -1,3 +1,3 @@
-This method will create multiple instances of the same class,
-If the Service class is injected multiple times is will create 
-multiple instances of the same class.this will reduce the application performance.
+this will create only one instance in memory.
+This will make our app more efficient and will save memory.
+ */
