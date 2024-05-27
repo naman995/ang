@@ -8,9 +8,16 @@ import { PostService } from '../Services/post.service';
 })
 export class PostComponent implements OnInit {
   posts!: Array<any>;
-  constructor(private postService : PostService) {
+  constructor(private postService: PostService) {
     // let postService = new PostService();
     this.posts = postService.postList;
+  }
+  addNewData() {
+    let newPost = {
+      id: 7,
+      postTitle: 'Post 7',
+    };
+    this.postService.addPost(newPost);
   }
   ngOnInit(): void {}
 }

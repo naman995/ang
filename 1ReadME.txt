@@ -1,2 +1,3 @@
-We can now inject the `MyService` into the `MyComponent` and use it
- in app without making multiple instances of the service. 
+in post service add addPost method then 
+in post component make a method add new Data()
+ and in html file make a button and bind
