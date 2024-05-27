@@ -1,3 +1,3 @@
-1) Create a service 
-2) then post.ts 
-3) then post.html
+This method will create multiple instances of the same class,
+If the Service class is injected multiple times is will create 
+multiple instances of the same class.this will reduce the application performance.
