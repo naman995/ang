@@ -1,5 +1,5 @@
-
-<h3>{{userDetails.city | appendCLI}}</h3>
-<!-- ng g pipes append-CLI -->
-
-{{text | summary:50}}
+<ul>
+  <li *ngFor="let post of posts">
+    {{post.postTitle}}
+  </li>
+</ul>
