@@ -1,3 +1,2 @@
-this will create only one instance in memory.
-This will make our app more efficient and will save memory.
- */
+We can now inject the `MyService` into the `MyComponent` and use it
+ in app without making multiple instances of the service. 
