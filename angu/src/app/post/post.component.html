@@ -1,7 +1,21 @@
-<button (click) = "addNewData()">Add</button>
-<p>This is coming from post Compoent</p>
-<ul>
-  <li *ngFor="let post of posts">
-    {{post.postTitle}}
-  </li>
-</ul>
+<div class="container mt-5">
+
+  <div class="form-area">
+    <form #f = 'ngForm' (submit)="onSubmit(f)">
+      <div class="form-group">
+        <label>First Name</label>
+        <input type="text" class="form-control" name="" id="" placeholder="Full Name">
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" class="form-control" name="" id="" placeholder="Email">
+      </div>
+      <div class="form-group">
+        <label>Address</label>
+        <textarea class="form-control" cols="30" rows="10" placeholder="Address" name="" id=""></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+
+</div>
