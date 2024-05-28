@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PostService } from '../Services/post.service';
+import { Post } from '../models/post';
 
 @Component({
   selector: 'app-post',
@@ -13,7 +14,7 @@ export class PostComponent implements OnInit {
     this.posts = postService.postList;
   }
   addNewData() {
-    let newPost = {
+    let newPost:Post = {
       id: 7,
       postTitle: 'Post 7',
     };
