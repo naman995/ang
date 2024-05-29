@@ -1,6 +1,6 @@
 <div class="container mt-5">
   <div class="form-area">
-    <form #f='ngForm' (submit)="onSubmit(f)">
+    <form #f='ngForm' (ngSubmit)="onSubmit(f)">
       <div class="form-group">
         <label>Full Name</label>
         <input type="text" placeholder="Full Name" class="form-control" name="fullName" ngModel #fullName='ngModel'
@@ -16,7 +16,8 @@
       <div class="form-group">
         <label>Email</label>
         <input type="email" class="form-control" name="email" ngModel #email="ngModel"
-          pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required id="" placeholder="Email">
+          pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+          [ngClass]="{'is-invalid': fullName.touched && fullName.invalid}" required id="" placeholder="Email">
       </div>
       <div *ngIf="email.errors?.['required']">
         <div class="alert alert-danger" *ngIf="email.touched && email.invalid">Email is Required</div>
@@ -27,7 +28,8 @@
       <div class="form-group">
         <label>Address</label>
         <textarea class="form-control" cols="30" rows="10" name="address" ngModel #address="ngModel"
-          placeholder="Address" id="" required></textarea>
+          placeholder="Address" id="" [ngClass]="{'is-invalid': fullName.touched && fullName.invalid}"
+          required></textarea>
         <div *ngIf="address.errors?.['required']">
           <div class="alert alert-danger" *ngIf="address.touched && address.invalid">Address is Required</div>
         </div>

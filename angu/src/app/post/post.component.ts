@@ -9,8 +9,8 @@ import { FormControl, NgForm } from '@angular/forms';
 })
 export class PostComponent {
   constructor() {}
-  onSubmit = (data: NgForm) => {
-    console.log(data);
+  onSubmit = (f: NgForm) => {
+    console.log(f.value);
   };
   getValue = (f: FormControl) => {
     console.log(f);
