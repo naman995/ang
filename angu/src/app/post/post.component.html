@@ -26,8 +26,11 @@
       </div>
       <div class="form-group">
         <label>Address</label>
-        <textarea class="form-control" cols="30" rows="10" name="address" ngModel placeholder="Address"
-          id=""></textarea>
+        <textarea class="form-control" cols="30" rows="10" name="address" ngModel #address="ngModel"
+          placeholder="Address" id="" required></textarea>
+        <div *ngIf="address.errors?.['required']">
+          <div class="alert alert-danger" *ngIf="address.touched && address.invalid">Address is Required</div>
+        </div>
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
