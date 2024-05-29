@@ -1,6 +1,6 @@
 import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { FormControl, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-post',
@@ -9,7 +9,10 @@ import { NgForm } from '@angular/forms';
 })
 export class PostComponent {
   constructor() {}
-  onSubmit = (data:NgForm) => {
+  onSubmit = (data: NgForm) => {
     console.log(data);
+  };
+  getValue = (f: FormControl) => {
+    console.log(f);
   };
 }
