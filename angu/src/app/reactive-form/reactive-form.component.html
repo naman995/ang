@@ -3,20 +3,28 @@
     <form [formGroup]="form">
       <div class="form-group">
         <label>Full Name</label>
-        <input  formControlName="fullName"  type="text" placeholder="Full Name" class="form-control" name="fullName">
+        <input formControlName="fullName" type="text" placeholder="Full Name" class="form-control" name="fullName">
         <div class="alert alert-danger" *ngIf="form.controls.fullName.touched && form.controls.fullName.invalid">
-            <div *ngIf="form.controls.fullName.errors?.required">The Full Name is required</div>
-            <div *ngIf="form.controls.fullName.errors?.minlength">The Full Name must be atleast 5 Character</div>
+          <div *ngIf="form.controls.fullName.errors?.required">The Full Name is required</div>
+          <div *ngIf="form.controls.fullName.errors?.minlength">The Full Name must be atleast 5 Character</div>
         </div>
       </div>
       <div class="form-group">
         <label>Email</label>
-        <input formControlName="email"   type="email" class="form-control" name="email" placeholder="Email">
+        <input formControlName="email" type="email" class="form-control" name="email" placeholder="Email">
+        <div class="alert alert-danger" *ngIf="form.controls.email.touched && form.controls.email.invalid">
+          <div *ngIf="form.controls.email.errors?.required">The Email is required</div>
+          <div *ngIf="form.controls.email.errors?.email">Invalid Email</div>
+        </div>
       </div>
       <div class="form-group">
         <label>Address</label>
-        <textarea formControlName="address"   class="form-control" cols="30" rows="10" name="address"
+        <textarea formControlName="address" class="form-control" cols="30" rows="10" name="address"
           placeholder="Address"></textarea>
+          <div class="alert alert-danger" *ngIf="form.controls.address.touched && form.controls.address.invalid">
+            <div *ngIf="form.controls.address.errors?.required">The Address is required</div>
+            <!-- <div *ngIf="form.controls.address.errors?.minlength">The Address must be atleast 5 Character</div> -->
+          </div>
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
