@@ -34,5 +34,11 @@ export class ReactiveFormComponent implements OnInit {
     return this.form.get('address');
   }
 
+  onSubmit(){
+    console.log(this.form.value);
+    // this.form.value;
+
+  }
+
   ngOnInit(): void {}
 }
