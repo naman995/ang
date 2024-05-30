@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, NgForm, FormGroup } from '@angular/forms';
+import { FormControl, NgForm, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-reactive-form',
@@ -10,7 +10,7 @@ export class ReactiveFormComponent implements OnInit {
   form: any;
   constructor() {
     this.form = new FormGroup({
-      fullName: new FormControl(),
+      fullName: new FormControl('',[Validators.required, Validators.minLength(5)]),
       email: new FormControl(),
       address: new FormControl(),
     });
