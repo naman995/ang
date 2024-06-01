@@ -17,13 +17,38 @@
           <div *ngIf="form.controls.email.errors?.email">Invalid Email</div>
         </div>
       </div>
-      <div class="form-group">
-        <label>Address</label>
-        <textarea formControlName="address" class="form-control" cols="30" rows="10" name="address"
-          placeholder="Address"></textarea>
-        <div class="alert alert-danger" *ngIf="form.controls.address.touched && form.controls.address.invalid">
-          <div *ngIf="form.controls.address.errors?.required">The Address is required</div>
-          <!-- <div *ngIf="form.controls.address.errors?.minlength">The Address must be atleast 5 Character</div> -->
+
+      <!-- Nested Contact Details FormGroup -->
+      <div formGroupName='contactDetails'>
+
+        <div class="form-group">
+          <label>Address</label>
+          <textarea formControlName="address" class="form-control" cols="30" rows="10" name="address"
+            placeholder="Address"></textarea>
+          <div class="alert alert-danger" *ngIf="form.controls.address.touched && form.controls.address.invalid">
+            <div *ngIf="form.controls.address.errors?.required">The Address is required</div>
+            <!-- <div *ngIf="form.controls.address.errors?.minlength">The Address must be atleast 5 Character</div> -->
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Shipping Address</label>
+          <input formControlName="ShippingAddress" class="form-control" cols="30" rows="10" name="shippingAddress"
+            placeholder="Address">
+          <div class="alert alert-danger"
+            *ngIf="form.controls.shippingAddress.touched && form.controls.shippingAddress.invalid">
+            <div *ngIf="form.controls.shippingAddress.errors?.required">The shippingAddress is required</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Contact No.</label>
+          <input formControlName="contactNo" class="form-control" cols="30" rows="10" name="contactNo"
+            placeholder="Contact No.">
+          <div class="alert alert-danger" *ngIf="form.controls.contactNo.touched && form.controls.contactNo.invalid">
+            <div *ngIf="form.controls.contactNo.errors?.required">The contact No is required</div>
+            <div *ngIf="form.controls.contactNo.errors?.pattern">InValid Contact No.</div>
+          </div>
         </div>
       </div>
       <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Submit</button>

@@ -9,6 +9,7 @@ import { FormControl, NgForm, FormGroup, Validators } from '@angular/forms';
 export class ReactiveFormComponent implements OnInit {
   form: any;
   // emailRjx: string = '^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$';
+  contactRjsx: string = '[789][0-9]{9}';
   constructor() {
     this.form = new FormGroup({
       fullName: new FormControl('', [
@@ -20,7 +21,15 @@ export class ReactiveFormComponent implements OnInit {
         Validators.email,
         //  Validators.pattern(this.emailRjx)
       ]),
-      address: new FormControl('', Validators.required),
+
+      contactDetails: new FormGroup({
+        address: new FormControl('', Validators.required),
+        shippingAddress: new FormControl('', Validators.required),
+        contactNo: new FormControl('', [
+          Validators.required,
+          Validators.pattern(this.contactRjsx),
+        ]),
+      }),
     });
   }
   get fullName() {
@@ -34,10 +43,17 @@ export class ReactiveFormComponent implements OnInit {
     return this.form.get('address');
   }
 
-  onSubmit(){
+  get shippingAddress() {
+    return this.form.get('contactDetails.shippingAddress');
+  }
+
+  get contactNo() {
+    return this.form.get('contactDetails.contactNo');
+  }
+
+  onSubmit() {
     console.log(this.form.value);
     // this.form.value;
-
   }
 
   ngOnInit(): void {}
