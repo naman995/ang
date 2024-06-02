@@ -13,6 +13,7 @@ import { AppendCLIPipe } from './Pipes/append-cli.pipe';
 import { SummaryPipe } from './Pipes/summary.pipe';
 // import { PostService } from './Services/post.service';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
     AppendCLIPipe,
     SummaryPipe,
     ReactiveFormComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,6 +33,7 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
+      { path: '', component: HomeComponent },
       { path: 'posts', component: PostListComponent },
     ]),
   ],
