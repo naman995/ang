@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -9,7 +11,7 @@ import { PostListComponent } from './post-list/post-list.component';
 import { AppendPipe } from './Pipes/append.pipe';
 import { AppendCLIPipe } from './Pipes/append-cli.pipe';
 import { SummaryPipe } from './Pipes/summary.pipe';
-import { PostService } from './Services/post.service';
+// import { PostService } from './Services/post.service';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 @NgModule({
@@ -23,7 +25,15 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
     SummaryPipe,
     ReactiveFormComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule.forRoot([
+      { path: 'posts', component: PostListComponent },
+    ]),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
