@@ -1,4 +1,5 @@
 <p>This is coming from postList component</p>
-<ul>
-  <li *ngFor="let post of postList">{{post.postTitle}}</li>
-</ul>
+<div *ngFor="let post of postList ; let index = index">
+  <h1>{{post.postTitle}}</h1>
+  <button [routerLink]="['/post', index ]">View Content</button>
+</div>

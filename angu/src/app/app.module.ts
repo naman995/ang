@@ -14,6 +14,7 @@ import { SummaryPipe } from './Pipes/summary.pipe';
 // import { PostService } from './Services/post.service';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { HomeComponent } from './home/home.component';
+import { SinglePostComponent } from './single-post/single-post.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { HomeComponent } from './home/home.component';
     SummaryPipe,
     ReactiveFormComponent,
     HomeComponent,
+    SinglePostComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,6 +37,7 @@ import { HomeComponent } from './home/home.component';
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
       { path: 'posts', component: PostListComponent },
+      { path: 'post/:id', component: SinglePostComponent },
     ]),
   ],
   providers: [],
