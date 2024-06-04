@@ -13,7 +13,9 @@ export class SinglePostComponent implements OnInit {
     this.route.paramMap.subscribe(value=>{ // 3
 
       let id =  value.get('id');
+      const title = value.get('title');
       console.log(id);
+      console.log(title);
     })
   }
 }

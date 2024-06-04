@@ -1,5 +1,5 @@
 <p>This is coming from postList component</p>
 <div *ngFor="let post of postList ; let index = index">
   <h1>{{post.postTitle}}</h1>
-  <button [routerLink]="['/post', index ]">View Content</button>
+  <button [routerLink]="['/post', index ,post.postTitle]">View Content</button>
 </div>
