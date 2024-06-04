@@ -15,9 +15,12 @@ export class AppComponent implements OnInit {
       observer.next('This is also from observable');
     }).subscribe((value) => console.log(value));
 
+    obsTest$.unsubscribe();
+
     const obsTest = function () {
       return 'return from function';
     };
+
     const returnData = obsTest();
     console.log(returnData);
   }
