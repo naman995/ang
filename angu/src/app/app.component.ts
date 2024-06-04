@@ -12,6 +12,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     const obsTest$ = new Observable((observer) => {
       observer.next('Return from observable');
+      observer.next('This is also from observable');
     }).subscribe((value) => console.log(value));
 
     const obsTest = function () {
