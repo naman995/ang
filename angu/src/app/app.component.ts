@@ -22,3 +22,10 @@ export class AppComponent implements OnInit {
   }
 }
 // to call onservable we need to subscribe it
+// Difference between oberver and function is that observer is async and function is sync
+// observer is async because it is not executed immediately
+// observer is executed when we subscribe it
+// function is executed immediately
+// observer is used to handle async operations
+
+// obs can return multiple values but function can return only one value
