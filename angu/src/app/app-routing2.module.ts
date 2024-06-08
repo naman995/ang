@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'posts', component: PostListComponent },
   { path: 'post/:id/:title', component: SinglePostComponent },
+  // { path: '**', component: SinglePostComponent },
 ];
 
 @NgModule({
