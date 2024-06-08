@@ -15,6 +15,7 @@ import { SummaryPipe } from './Pipes/summary.pipe';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { HomeComponent } from './home/home.component';
 import { SinglePostComponent } from './single-post/single-post.component';
+import { AppRouting2Module } from './app-routing2.module';
 
 @NgModule({
   declarations: [
@@ -34,11 +35,7 @@ import { SinglePostComponent } from './single-post/single-post.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule.forRoot([
-      { path: '', component: HomeComponent },
-      { path: 'posts', component: PostListComponent },
-      { path: 'post/:id/:title', component: SinglePostComponent },
-    ]),
+    AppRouting2Module,
   ],
   providers: [],
   bootstrap: [AppComponent],
