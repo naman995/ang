@@ -4,7 +4,7 @@
 
 <h1>Angular Blog Site</h1>
 <button routerLink="/" routerLinkActive="active">Home </button>
-<button routerLink="/posts" routerLinkActive="active">Post List</button>
+<button routerLink="/posts" routerLinkActive="active" [queryParams]="{page:1 ,orderBy:'newest'}">Post List</button>
 <a routerLink="/posts">Post List</a>
 <!-- <app-post-list></app-post-list> -->
 
