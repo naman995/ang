@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Route, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -7,7 +8,17 @@ import { Observable } from 'rxjs';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
+  constructor(private router: Router) {}
+
   title = 'angu';
+
+  onSubmit = () => {
+    // this.router.navigate(['/posts']);
+    this.router.navigate(['/post', 1, 'postTitle']);
+    this.router.navigate(['/post'], {
+      queryParams: { page: 1, order: 'postTitle' },
+    });
+  };
 
   ngOnInit(): void {
     const obsTest$ = new Observable((observer) => {
